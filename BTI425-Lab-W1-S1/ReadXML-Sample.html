@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //Create the XHR object
+    var xhttp = new XMLHttpRequest();
+    //Open the file
+    xhttp.open("GET", "books.xml", false);
+    //Send the request
+    xhttp.send();
+    //Read data (xmlDoc)
+    xmlDoc = xhttp.responseXML;
+    //Display data 
+    items = xmlDoc.getElementsByTagName("title")[0].innerHTML; //returns the title of the first book 
+    //display plate-no
+    //items = xmlDoc.getElementsByTagName("Price")[0].innerHTML; //returns the price of the first book 
+
+    console.log(xmlDoc);
+    </script>
+</body>
+</html>

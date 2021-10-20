@@ -1,0 +1,36 @@
+<html>
+<head>
+<!-- Prepared By : Shahdad -->
+<title> BTI425 - Week 1 </title>
+<script>
+function openJSON(){
+  xmlhttp = new XMLHttpRequest();
+  //Te following line is where it goes through 4 stages (which is why we can see alert 3 times in the output)
+	xmlhttp.onreadystatechange = function() {
+ //   alert("A"); //goes through the 4 stages
+    if (this.readyState == 4 && this.status == 200) 
+      myFunction(this);
+      myFunction(name);
+    }
+  //true means it's Sync (not async)
+	xmlhttp.open("GET", "BTI425-json_data.json", true);
+	xmlhttp.send();
+}
+function myFunction(Data) {  
+ // alert("B");
+  var myObj = JSON.parse(Data.responseText);
+  document.getElementById("demo").innerHTML = myObj.name + " , " + myObj.age; //display John , 31
+  //display all pets name
+  //document.getElementsByTagName("pets") = myObj.pets; 
+
+  //console.log(myObj2.pets);
+}
+</script>
+</head>
+
+<body onload=openJSON()>
+<p id="demo"></p>
+
+</body>
+
+</html>

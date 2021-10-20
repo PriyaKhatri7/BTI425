@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Prepared by Shahdad -->
+<title> BTI425-Week1</title>
+</head>
+
+<body>
+<p id="demo"></p>
+<script>
+//Read JSON file
+//Create the XHR object
+var xhttp = new XMLHttpRequest();
+//Open the file
+xhttp.open("GET", "Activity1-PriyaKhatri.json", false);
+//Send the request
+xhttp.send();
+//Read data (jsonDoc) from file and convert it to JSON. JSON.parse - reads data from file and converts it to JSON object
+jsonDoc = JSON.parse(xhttp.responseText);
+//Display data 
+//items = xmlDoc.getElementsByTagName("title")[0].innerHTML; //returns the title of the first book 
+console.log(jsonDoc);
+
+//items = xmlDoc.getElementsByTagName('book').getAttribute('category'); //this will just get me the first output
+</script>
+
+</body>
+</html>
