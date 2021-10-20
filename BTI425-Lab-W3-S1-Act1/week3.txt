@@ -1,0 +1,13 @@
+What is the difference between react1.html and react2.html?
+The difference between React1.html and React2.html is that in react2 there is a component. It's named Hello and then we notice that we can use this later in line 25 instead of rewriting Hello World.
+
+The first html program, it puts the content we see Hello World and want to render directly into the render() function, and it will tell us that we are using in browser babel framework. The second file creates a component and returns the component. 
+
+Activity2:
+
+While running the commands node -v and npm -v it will return the versions. I got as follows:
+C:\Users\priya.khatri>node -v
+v14.15.4
+
+C:\Users\priya.khatri>npm -v
+6.14.10
