@@ -1,0 +1,45 @@
+<html>
+<head>
+<!-- prepared by: Shahdad -->
+<title>BTI425</title>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+   //Check Button Clicked
+   $("#find").click(function() {
+     $.ajax({
+	   url:"mydata.json",
+	   success: function(data){
+		   //Step 1: Read the Form data
+		   var zipData = $("#zipcode").val();
+		   //console.log(zipData);
+		   //Step 2:Search for ZIP 
+		   $.each(data,function(index, value){
+			     //console.log(value);
+				 if( zipData == value.ZIP)
+				   { 
+				   //Step 3:Display the related City to the ZIP  
+				     $("#demo").html(value.City);
+				     return false;
+				   }
+			   });
+		    
+		   console.log(data)
+		   },
+	   error: function(){ alert('Error!')}
+     });
+   });
+});		
+
+</script>
+</head>
+<body >
+<form>
+  ZIP : <input type="text" id="zipcode">
+  <input type="button" value="Find ZIP" id="find">
+</form>
+<p id="demo"></p>
+</body>
+</html>
