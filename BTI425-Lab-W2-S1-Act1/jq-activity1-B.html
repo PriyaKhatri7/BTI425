@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<!-- prepared by: Shahdad -->
+<title>BTI425</title>
+<script src="ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+  //change the background colour of the 2nd paragrapgh
+  $(document).ready(function () {
+    $("p"[1]).css({"color": "blue"});
+});
+</script>
+<style>
+#box1{
+width:300px;
+height:200px;
+background-color:orange;
+}
+</style>
+</head>
+
+<body>
+<h1>WEB422 - jQuery</h1>
+<p>This is Paragraph 1</p>
+<ul>
+  <li>List 1</li>
+  <li>List 2</li>
+  <li>List 3
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+    </ul>
+  </li>
+</ul>
+<p>This is Paragraph 2</p>
+<div id="box1">
+This is Box 1
+</div>
+</body>
+</html>

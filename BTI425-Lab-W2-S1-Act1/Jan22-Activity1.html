@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--step1: adding the library-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!--Step 2: adding the jquery block-->
+    <script>
+        $(document).ready(function(){
+            $.ajax({
+                type: "get",
+                dataType:xml,
+                //Step1: Get temp in toronto in XML
+                url: "https://api.openweathermap.org/data/2.5/weather?q=Toronto&mode=xml&units=metrics&appid=45345d2a24fd312c6442bd65e9ef6d20",
+                
+                success:function(data){
+                    //parse the data
+                    output = $(data).find("temperature").attr("value");
+                    console.log(data);
+                    $("p").html(output);
+                },
+                error:function(data){
+                    //display error
+                    console.log("error");
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+</body>
+</html>

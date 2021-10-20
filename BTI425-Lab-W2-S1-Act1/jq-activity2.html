@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<!-- prepared by: Shahdad -->
+<title>BTI425</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script>
+$(document).ready(function(){
+	// Handle onclick event
+	//$("button").click(function(){
+	  $("button").click(function(){
+		var data = [ {"Id": 10004, "PageName": "Club"},{"Id": 10040, "PageName": "About Us"}, {"Id": 10059, "PageName": "Events"}];
+	  alert(data[0].Id);
+	 // $.getJSON("jq-activity2-data.json", function(data){
+	//	console.log(data);
+	  }); 
+	});
+</script>
+</head>
+<body>
+<p id="id"> </p>
+<button id="btn">
+Click Me
+</button>
+</body>
+</html>
